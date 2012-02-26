@@ -1,7 +1,6 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxCameraFilter.h"
 
 class ofApp : public ofBaseApp {
 public:
@@ -14,5 +13,12 @@ public:
 	ofMesh mesh;
 	ofShader shader;
 	float focusDistance, aperture;
-	ofxCameraFilter cameraFilter;
+    
+    int counter, exportCounter;
+    
+    ofImage img, lastImg, memImg, screen;
+    
+    int lastZ, zTarget, z;
+  //  float z;
+
 };

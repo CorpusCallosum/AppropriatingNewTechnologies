@@ -22,7 +22,7 @@ void ofApp::setup() {
 }
 
 void ofApp::update() {
-	keyPressed(' ');
+	//keyPressed(' ');
 }
 
 void ofApp::draw() {
@@ -38,6 +38,12 @@ void ofApp::draw() {
 	fbo.draw(0, 0);
 	
 	fbo.readToPixels(audioPixels);
+    
+    
+    //draw line
+    ofSetColor(255, 0, 0);
+	int y = time / (rateDivider * ofGetWidth());
+	ofLine(0, y, ofGetWidth(), y);
 }
 
 void ofApp::keyPressed(int key) {
